@@ -1,0 +1,50 @@
+/* max.css */
+
+/* סגנון גוף הדף */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב כותרת עם תמונת רקע */
+.header-section {
+    background: url('download.jpeg.jpg') no-repeat center center; /* כתובת התמונה */
+    background-size: cover; /* מכסה את כל הכותרת */
+    color: #ffffff;
+    padding: 3rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* שכבת שקיפות כהה */
+}
+
+.header-section h1,
+.header-section p {
+    position: relative;
+    z-index: 1; /* מעל השכבה הכהה */
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.5rem;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+

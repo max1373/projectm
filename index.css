@@ -1,0 +1,49 @@
+/* Light and Dark mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar-light.bg-primary {
+  background-color: #2a9df4;
+}
+
+.navbar-dark.bg-dark {
+  background-color: #222222;
+}
+
+/* User login cards */
+.login-card {
+  width: 18rem;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.login-card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Theme toggle button */
+#toggleThemeBtn {
+  transition: background-color 0.3s ease;
+}
+
+#toggleThemeBtn:hover {
+  background-color: #ffeb3b;
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 10px;
+}

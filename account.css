@@ -1,0 +1,134 @@
+/* hospital-profile.css */
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ecf0f1; /* אפור בהיר */
+    color: #2c3e50; /* טקסט ראשי */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* Profile Card */
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #95a5a6; /* אפור בהיר */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: right;
+}
+
+.profile-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Title */
+.profile-card h2 {
+    font-size: 2rem;
+    color: #0d6efd; /* כחול מרכזי */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card h2 i {
+    margin-left: 8px; /* משמאל לימין */
+    color: #0d6efd; /* כחול מרכזי */
+}
+
+/* Form Labels */
+.form-label {
+    color: #2c3e50; /* טקסט כהה */
+    font-weight: 600;
+}
+
+/* Input Group for Icons */
+.input-group-text {
+    background-color: #ecf0f1; /* רקע בהיר */
+    border: none;
+    color: #0d6efd; /* כחול מרכזי */
+}
+
+.form-control,
+.form-select {
+    background: #ecf0f1; /* רקע בהיר */
+    border: 1px solid #95a5a6; /* גבול אפור בהיר */
+    color: #2c3e50; /* טקסט כהה */
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #d3ece6;
+    border-color: #0d6efd; /* כחול מרכזי */
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Submit Button */
+button[type="submit"] {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #0d6efd; /* כחול מרכזי */
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: #ffffff; /* טקסט לבן */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0a58ca; /* כחול כהה יותר להבלטה */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Link Styling */
+a.btn-link {
+    color: #0d6efd; /* כחול מרכזי */
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+a.btn-link:hover {
+    color: #0a58ca; /* כחול כהה יותר */
+    text-decoration: underline;
+}
+
+/* Placeholder Styling */
+.profile-card form .form-control::placeholder {
+    color: #707b7c; /* אפור כהה */
+    font-style: italic;
+}
+
+/* Select Box */
+.profile-card form select.form-select {
+    background: #ecf0f1;
+    color: #2c3e50; /* טקסט כהה */
+    padding: 0.75rem;
+    border: 1px solid #95a5a6; /* אפור בהיר */
+}
+
+.profile-card form select.form-select:focus {
+    background-color: #d3ece6;
+    border-color: #0d6efd; /* כחול מרכזי */
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Button and Link Icon Styling */
+button i, a.btn-link i {
+    margin-left: 6px; /* מימין לשמאל */
+}

@@ -5,50 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ייעוץ רפואי</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* עיצוב בסיסי */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .header-section {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .header-section h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 900px;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        .container h2 {
-            font-size: 1.8rem;
-            color: #0056b3;
-            font-weight: 700;
-        }
-        .container p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="header-section">
-        <h1>ייעוץ רפואי</h1>
+    <header class="bg-primary text-white text-center py-3">
+        <h1><i class="fas fa-comments-medical"></i> ייעוץ רפואי</h1>
     </header>
-    <section class="container">
-        <h2>מידע על ייעוץ רפואי</h2>
-        <p>אנו מציעים ייעוץ מקצועי בכל תחומי הרפואה עם רופאים מומחים.</p>
-    </section>
+
+    <div class="container mt-4">
+        <h2 class="text-primary">שיחות אחרונות עם רופאים</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ד"ר לוי מיכאל</h5>
+                    <small>2 ימים</small>
+                </div>
+                <p class="mb-1">הודעה קצרה מהשיחה האחרונה עם הרופא.</p>
+                <small>סטטוס: ממתין לתשובה</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ד"ר רחל כהן</h5>
+                    <small>שבוע שעבר</small>
+                </div>
+                <p class="mb-1">תשובת הרופא מייעוץ קודם.</p>
+                <small>סטטוס: נענו</small>
+            </a>
+        </div>
+        <button class="btn btn-primary mt-4"><i class="fas fa-plus-circle"></i> הודעה חדשה לרופא</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

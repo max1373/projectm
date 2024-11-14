@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוצאות בדיקות - קופת חולים</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="#">קופת חולים</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">בית</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">שירותים</a></li>
+                    <li class="nav-item"><a class="nav-link" href="appointments.html">קביעת תור</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Test Results Section -->
+    <section class="container my-5">
+        <h2 class="text-center fw-bold mb-4">תוצאות בדיקות</h2>
+        
+        <form id="testResultsForm">
+            <div class="mb-3">
+                <label for="patientID" class="form-label">מספר תעודת זהות</label>
+                <input type="text" id="patientID" class="form-control" placeholder="הכנס מספר תעודת זהות" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">הצג תוצאות</button>
+        </form>
+
+        <div id="testResults" class="mt-4" style="display:none;">
+            <h4 class="text-center">תוצאות הבדיקות שלך:</h4>
+            <ul class="list-group">
+                <li class="list-group-item">בדיקה 1: תוצאה חיובית</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>© כל הזכויות שמורות לקופת חולים</footer>
+
+    <script src="test-results.js"></script>
+</body>
+</html>

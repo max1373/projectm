@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אתר קופת חולים</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="max.css">
+    <link href="max.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header-section text-white text-center py-5">
-        <h1 class="display-4">ברוך הבא לאתר קופת חולים</h1>
-        <p>התחבר לרפואה חכמה, מהירה ונוחה</p>
-    </header>
-    
-    <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand text-primary" href="#">קופת חולים</a>
+            <h1 class="display-4">ברוך הבא לאתר קופת חולים</h1>
+            <p>התחבר לרפואה חכמה, מהירה ונוחה</p>
+            <a href="#services" class="btn btn-light mt-3 btn-lg">למד עוד</a>
+        </div>
+    </header>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-clinic-medical"></i> קופת חולים</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,12 +31,12 @@
                     <li class="nav-item"><a class="nav-link" href="#services">שירותים</a></li>
                     <li class="nav-item"><a class="nav-link" href="#appointments">קביעת תור</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">צור קשר</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="account.html">צור פרופיל מטופל</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="account.html">צור פרופיל</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <!-- Home Section -->
     <section id="home" class="container section-style text-center my-5">
         <h2 class="fw-bold mb-3">מידע כללי</h2>
@@ -40,43 +44,43 @@
         <div id="moreInfo" class="additional-info mt-3">
             <p>המידע באתר כולל שירותי בריאות עדכניים, תמיכה און-ליין ועוד.</p>
         </div>
-        <a href="account.html" class="btn btn-primary mt-4">צור פרופיל מטופל</a>
+        <a href="account.html" class="btn btn-primary mt-4 btn-lg">צור פרופיל מטופל</a>
     </section>
-    
+
     <!-- Services Section -->
     <section id="services" class="container section-style my-5">
         <h2 class="text-center fw-bold mb-3">שירותים רפואיים</h2>
         <div class="row mt-4 text-center">
             <div class="col-md-4">
-                <div class="card shadow-sm h-100">
+                <div class="card service-card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">בדיקות כלליות</h5>
+                        <h5 class="card-title"><i class="fas fa-stethoscope"></i> בדיקות כלליות</h5>
                         <p class="card-text">בדיקות רפואיות כלליות במגוון תחומים.</p>
-                       <a href="general-exams.html"><button class="btn btn-primary" onclick="showServiceDetails('בדיקות כלליות')">פרטים נוספים</button></a>
+                        <a href="general-exams.html" class="btn btn-outline-primary">פרטים נוספים</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card shadow-sm h-100">
+                <div class="card service-card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">ייעוץ רפואי</h5>
+                        <h5 class="card-title"><i class="fas fa-user-md"></i> ייעוץ רפואי</h5>
                         <p class="card-text">ייעוץ על ידי רופאים מומחים במגוון תחומים.</p>
-                       <a href="medical-consultation.html"><button class="btn btn-primary" onclick="showServiceDetails('ייעוץ רפואי')" >>פרטים נוספים</button> </a>
+                        <a href="medical-consultation.html" class="btn btn-outline-primary">פרטים נוספים</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card shadow-sm h-100">
+                <div class="card service-card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">תוצאות בדיקות</h5>
+                        <h5 class="card-title"><i class="fas fa-vials"></i> תוצאות בדיקות</h5>
                         <p class="card-text">גישה מהירה לתוצאות בדיקות ישירות מהאתר.</p>
-                        <a href="test-results.html"><button class="btn btn-primary" onclick="showServiceDetails('תוצאות בדיקות')">פרטים נוספים</button></a>
+                        <a href="test-results.html" class="btn btn-outline-primary">פרטים נוספים</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Appointments Section -->
     <section id="appointments" class="container section-style my-5">
         <h2 class="text-center fw-bold mb-3">קביעת תור</h2>
@@ -100,19 +104,19 @@
             <button type="submit" class="btn btn-primary w-100">קבע תור</button>
         </form>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="container section-style text-center my-5">
         <h2 class="fw-bold mb-3">צור קשר</h2>
-        <p class="lead mb-4">ליצירת קשר התקשרו למספר () או שלחו מייל לכתובת </p>
-        <button class="btn btn-outline-primary" onclick="contactSupport()">שלח הודעה לתמיכה</button>
+        <p class="lead mb-4">ליצירת קשר התקשרו למספר 123-456 או שלחו מייל לכתובת support@clinic.com</p>
+        <button class="btn btn-outline-primary btn-lg" onclick="contactSupport()">שלח הודעה לתמיכה</button>
     </section>
-    
+
     <!-- Footer Section -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>© כל הזכויות שמורות לקופת חולים</p>
+        <p>© כל הזכויות שמורות לקופת חולים 2024</p>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="max.js"></script>
 </body>

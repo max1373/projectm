@@ -1,4 +1,3 @@
-// רשימת בדיקות לדוגמה
 const exams = [
     {
         name: "בדיקת דם כללית",
@@ -12,7 +11,7 @@ const exams = [
     }
 ];
 
-// פונקציה להצגת הבדיקות
+// פונקציה למילוי הרשימה של הבדיקות
 function populateExams() {
     const examsList = document.getElementById("examsList");
 
@@ -33,9 +32,16 @@ function populateExams() {
     });
 }
 
-// פונקציה לדוגמה לקביעת תור (ניתן להרחיב אותה)
+// פונקציה לטיפול בקביעת תור
 function scheduleExam(examName) {
-    alert(`תור ל-${examName} נקבע בהצלחה!`);
+    const examDate = prompt(`בחר תאריך עבור ${examName} (לדוגמה: 2024-12-01):`);
+
+    if (examDate) {
+        document.getElementById("examDateConfirmation").textContent = examDate;
+        document.getElementById("examConfirmation").style.display = "block";
+    } else {
+        alert("לא נבחר תאריך.");
+    }
 }
 
 // קריאה לפונקציה בעת טעינת הדף

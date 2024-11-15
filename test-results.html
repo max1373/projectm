@@ -11,15 +11,20 @@
             background-color: #f8f9fa;
         }
 
+        .table-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
         .badge {
             font-size: 1rem;
         }
 
-        .table-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        .modal-header {
+            background-color: #007bff;
+            color: white;
         }
     </style>
 </head>
@@ -37,18 +42,16 @@
                         <th>תאריך בדיקה</th>
                         <th>תוצאה</th>
                         <th>סטטוס</th>
-                        <th>פעולה</th>
+                        <th>פעולות</th>
                     </tr>
                 </thead>
-                <tbody id="testResults">
-                </tbody>
+                <tbody id="testResults"></tbody>
             </table>
         </div>
     </div>
 
-    <!-- Modal for Details -->
     <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="detailsModalLabel">פרטי בדיקה</h5>
@@ -58,6 +61,7 @@
                     <p><strong>תאריך:</strong> <span id="modalDate"></span></p>
                     <p><strong>תוצאה:</strong> <span id="modalResult"></span></p>
                     <p><strong>סטטוס:</strong> <span id="modalStatus"></span></p>
+                    <div id="chartContainer" style="height: 300px;"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">סגירה</button>
@@ -67,6 +71,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="results.js"></script>
+    <script src="test-results.js"></script>
 </body>
 </html>

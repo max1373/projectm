@@ -6,6 +6,31 @@
     <title>בדיקות כלליות</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #007bff;
+        }
+
+        .list-group-item {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+        }
+
+        .list-group-item h5 {
+            color: #007bff;
+        }
+
+        .btn-outline-primary {
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-primary text-white text-center py-3">
@@ -14,24 +39,10 @@
 
     <div class="container mt-4">
         <h2 class="text-primary">בדיקות זמינות</h2>
-        <div class="list-group">
-            <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">בדיקת דם כללית</h5>
-                    <button class="btn btn-outline-primary btn-sm"><i class="fas fa-calendar-plus"></i> קביעת תור</button>
-                </div>
-                <p class="mb-1">בדיקה להערכת כלל מרכיבי הדם (המוגלובין, תאי דם ועוד).</p>
-            </div>
-            <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">בדיקת אולטרסאונד</h5>
-                    <button class="btn btn-outline-primary btn-sm"><i class="fas fa-calendar-plus"></i> קביעת תור</button>
-                </div>
-                <p class="mb-1">הדמיה לא פולשנית של איברי הגוף לצורך אבחון.</p>
-            </div>
-        </div>
+        <div class="list-group" id="examsList"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="general-exams.js"></script>
 </body>
 </html>

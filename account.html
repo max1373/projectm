@@ -11,52 +11,49 @@
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="profile-card">
-            <div class="profile-image"></div>
-            <div class="profile-form">
-                <h2 class="text-center mb-4"><i class="fas fa-user-circle"></i> צור פרופיל מטופל</h2>
-                <form id="patientProfileForm">
-                    <div class="mb-3">
-                        <label for="fullName" class="form-label">שם מלא</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" id="fullName" class="form-control" placeholder="הכנס שם מלא" required>
-                        </div>
+            <h2 class="text-center mb-4"><i class="fas fa-user-circle"></i> צור פרופיל מטופל</h2>
+            <form id="patientProfileForm">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">שם מלא</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" id="fullName" class="form-control" placeholder="הכנס שם מלא" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="idNumber" class="form-label">תעודת זהות</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                            <input type="text" id="idNumber" class="form-control" placeholder="הכנס מספר תעודת זהות" required>
-                        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="idNumber" class="form-label">תעודת זהות</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                        <input type="text" id="idNumber" class="form-control" placeholder="הכנס מספר תעודת זהות" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="birthdate" class="form-label">תאריך לידה</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                            <input type="date" id="birthdate" class="form-control" required>
-                        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="birthdate" class="form-label">תאריך לידה</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="date" id="birthdate" class="form-control" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">דוא"ל</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
-                        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">דוא"ל</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="preferredServices" class="form-label">שירותים רפואיים מועדפים</label>
-                        <select id="preferredServices" class="form-select" multiple>
-                            <option value="general">בדיקות כלליות</option>
-                            <option value="consult">ייעוץ רפואי</option>
-                            <option value="special">שירותים מיוחדים</option>
-                            <option value="therapy">טיפולים</option>
-                            <option value="lab">בדיקות מעבדה</option>
-                        </select>
-                        <small class="text-muted">ניתן לבחור יותר משירות אחד</small>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 mt-4"><i class="fas fa-user-plus"></i> צור פרופיל</button>
-                </form>
-            </div>
+                </div>
+                <div class="mb-3">
+                    <label for="preferredServices" class="form-label">שירותים רפואיים מועדפים</label>
+                    <select id="preferredServices" class="form-select" multiple>
+                        <option value="general">בדיקות כלליות</option>
+                        <option value="consult">ייעוץ רפואי</option>
+                        <option value="special">שירותים מיוחדים</option>
+                        <option value="therapy">טיפולים</option>
+                        <option value="lab">בדיקות מעבדה</option>
+                    </select>
+                    <small class="text-muted">ניתן לבחור יותר משירות אחד</small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-4"><i class="fas fa-user-plus"></i> צור פרופיל</button>
+            </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

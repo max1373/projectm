@@ -1,5 +1,4 @@
-// max.js
-
+// שדרוג פונקציית קביעת תור
 document.getElementById('appointmentForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const service = document.getElementById('service').value;
@@ -8,29 +7,24 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     alert(`תור לשירות ${service} נקבע בהצלחה בתאריך ${date} בשעה ${time}`);
 });
 
-function showMoreInfo() {
-    const moreInfo = document.getElementById('moreInfo');
-    moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
-}
+// כפתור תרגום
+document.getElementById('translateBtn').addEventListener('click', function () {
+    const translations = {
+        hebrew: {
+            headerTitle: "ברוך הבא לאתר קופת חולים",
+            footerText: "© כל הזכויות שמורות לקופת חולים 2024"
+        },
+        english: {
+            headerTitle: "Welcome to the Clinic Website",
+            footerText: "© All rights reserved to the clinic 2024"
+        }
+    };
 
-function showServiceDetails(service) {
-    alert(`מידע נוסף על שירות ${service}`);
-}
+    const currentLanguage = document.body.getAttribute("lang") === "he" ? "hebrew" : "english";
+    const newLanguage = currentLanguage === "hebrew" ? "english" : "hebrew";
+    document.body.setAttribute("lang", newLanguage === "hebrew" ? "he" : "en");
 
-function contactSupport() {
-    alert("פניה לתמיכה נשלחה בהצלחה! ניצור עמך קשר בהקדם.");
-}
-
-
-// max.js
-
-document.getElementById('patientProfileForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const fullName = document.getElementById('fullName').value;
-    const idNumber = document.getElementById('idNumber').value;
-    const birthdate = document.getElementById('birthdate').value;
-    const email = document.getElementById('email').value;
-
-    alert(`פרופיל עבור ${fullName} נוצר בהצלחה!`);
-    // ניתן להוסיף קוד לשמירת המידע בשרת או ב-LocalStorage
+    const t = translations[newLanguage];
+    document.querySelector('.header-section h1').innerText = t.headerTitle;
+    document.querySelector('footer p').innerText = t.footerText;
 });

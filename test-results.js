@@ -31,19 +31,11 @@ function showDetails(date, result, status) {
     document.getElementById("modalDate").textContent = date;
     document.getElementById("modalResult").textContent = result;
     document.getElementById("modalStatus").textContent = status;
-    // הצגת גרף מדומה על סמך סטטוס
-    drawChart(status);
 }
 
 // פונקציה להורדת קובץ תוצאות
 function downloadResult(result) {
     alert(`הורדת את התוצאה: ${result}`);
-}
-
-// פונקציה לציור גרף
-function drawChart(status) {
-    const container = document.getElementById("chartContainer");
-    container.innerHTML = `<p>גרף עבור מצב: ${status} (בקרוב)</p>`;
 }
 
 document.addEventListener("DOMContentLoaded", populateTable);

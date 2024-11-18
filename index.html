@@ -118,6 +118,47 @@
     <footer class="bg-dark text-white text-center py-3">
         <p>© כל הזכויות שמורות לקופת חולים 2024</p>
     </footer>
+    <section id="why-choose-us" class="container my-5">
+        <h2 class="text-center fw-bold mb-4">למה לבחור בנו?</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
+                <h4>מחשבון סימפטומים</h4>
+                <p>הזן תסמינים וקבל מידע ראשוני על אפשרויות טיפול.</p>
+                <button class="btn btn-outline-primary" onclick="openSymptomChecker()">בדוק תסמינים</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-info-circle fa-3x text-primary mb-3"></i>
+                <h4>שאלות ותשובות</h4>
+                <p>קבל תשובות מהירות לשאלות נפוצות על שירותי קופת החולים.</p>
+                <button class="btn btn-outline-primary" onclick="showFAQ()">שאלות נפוצות</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+                <h4>מערכת התראות</h4>
+                <p>קבל עדכונים על חיסונים, תוצאות בדיקות ופעולות חשובות נוספות.</p>
+                <button class="btn btn-outline-primary" onclick="showNotifications()">הצג התראות</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- מידע רפואי שימושי -->
+    <section id="useful-info" class="container my-5">
+        <h2 class="text-center fw-bold mb-4">מידע רפואי שימושי</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>מדריך לטיפול בשפעת</h5>
+                <p>למד כיצד להתמודד עם שפעת ולהפחית את הסיכון להדבקה.</p>
+                <a href="flu-guide.html" class="btn btn-primary">קרא עוד</a>
+            </div>
+            <div class="col-md-6">
+                <h5>מידע על חיסונים</h5>
+                <p>הבין אילו חיסונים נחוצים לך ולמשפחתך ואיך ניתן לקבל אותם.</p>
+                <a href="vaccines-info.html" class="btn btn-primary">קרא עוד</a>
+            </div>
+        </div>
+    </section>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>

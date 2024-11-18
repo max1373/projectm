@@ -28,3 +28,17 @@ document.getElementById('translateBtn').addEventListener('click', function () {
     document.querySelector('.header-section h1').innerText = t.headerTitle;
     document.querySelector('footer p').innerText = t.footerText;
 });
+// פתיחת מחשבון סימפטומים
+function openSymptomChecker() {
+    alert("מחשבון התסמינים יושק בקרוב!");
+}
+
+// הצגת שאלות נפוצות
+function showFAQ() {
+    alert("שאלות ותשובות יתווספו בקרוב!");
+}
+
+// הצגת התראות
+function showNotifications() {
+    alert("אין התראות חדשות כרגע.");
+}

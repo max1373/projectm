@@ -55,5 +55,7 @@ window.addEventListener("beforeunload", () => {
     questionIndex = 0;
 });
 
-// הצגת צ'אט בעת טעינת הדף
-document.addEventListener("DOMContentLoaded", displayChat);
+// הצגת הודעת ברוכים הבאים בעת טעינת הדף
+document.addEventListener("DOMContentLoaded", () => {
+    displayChat();
+});

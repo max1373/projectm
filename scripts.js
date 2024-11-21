@@ -98,22 +98,14 @@ document.getElementById('translateIcon').addEventListener('click', function () {
     document.querySelector('.header-section h1').innerText = t.headerTitle;
     document.querySelector('footer p').innerText = t.footerText;
 });
-// פתיחת מודל יצירת קשר בלחיצה על הכפתור
-document.getElementById('contactBtn').addEventListener('click', function () {
-    const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
-    contactModal.show();
-});
-
-// שליחת טופס יצירת קשר
+// פונקציה לשליחת טופס צור קשר
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    alert(`תודה על פנייתך, ${name}! ניצור איתך קשר בכתובת: ${email}`);
-    // איפוס הטופס וסגירת המודל
-    this.reset();
-    const contactModal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-    contactModal.hide();
+    alert(`תודה ${name}, פנייתך נשלחה בהצלחה! ניצור עמך קשר בכתובת ${email}`);
+    // איפוס הטופס
+    event.target.reset();
 });

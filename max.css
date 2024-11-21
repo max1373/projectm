@@ -157,34 +157,23 @@ footer .btn-primary:hover {
 #translateIcon:hover {
     color: #007bff;
 }
-/* עיצוב הכפתור של יצירת קשר */
-#contactBtn {
+/* עיצוב מודל יצירת קשר */
+#contactModal .modal-header {
     background-color: #007bff;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
 }
 
-#contactBtn:hover {
+#contactModal .modal-body {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+#contactModal .btn-primary {
     background-color: #0056b3;
-    transform: scale(1.05);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 
-/* עיצוב המודל של יצירת קשר */
-.modal-header {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.modal-body .btn {
-    background-color: #007bff;
-}
-
-.modal-body .btn:hover {
-    background-color: #0056b3;
+#contactModal .btn-primary:hover {
+    background-color: #003f8a;
 }

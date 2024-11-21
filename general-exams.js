@@ -105,3 +105,12 @@ function scheduleExam(examName) {
 
 // קריאה לפונקציה בעת טעינת הדף
 document.addEventListener("DOMContentLoaded", populateExams);
+// פונקציה לקביעת תור
+function scheduleTest(testName) {
+    const testDate = prompt(`בחר תאריך עבור ${testName} (לדוגמה: 2024-12-01):`);
+    if (testDate) {
+        alert(`תור ל-${testName} נקבע בהצלחה לתאריך ${testDate}!`);
+    } else {
+        alert("לא נבחר תאריך.");
+    }
+}

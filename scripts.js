@@ -63,3 +63,38 @@ document.getElementById('translateBtn').addEventListener('click', function () {
     document.querySelector('.header-section h1').innerText = t.headerTitle;
     document.querySelector('footer p').innerText = t.footerText;
 });
+// פתיחת המודל בטעינת הדף
+document.addEventListener('DOMContentLoaded', function () {
+    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+    loginModal.show();
+});
+
+// פונקציית התחברות (הדגמה)
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    alert(`ברוך הבא, ${email}!`);
+});
+
+// כפתור תרגום כאייקון
+document.getElementById('translateIcon').addEventListener('click', function () {
+    const translations = {
+        hebrew: {
+            headerTitle: "ברוך הבא לאתר קופת חולים",
+            footerText: "© כל הזכויות שמורות לקופת חולים 2024"
+        },
+        english: {
+            headerTitle: "Welcome to the Clinic Website",
+            footerText: "© All rights reserved to the clinic 2024"
+        }
+    };
+
+    const currentLanguage = document.body.getAttribute("lang") === "he" ? "hebrew" : "english";
+    const newLanguage = currentLanguage === "hebrew" ? "english" : "hebrew";
+    document.body.setAttribute("lang", newLanguage === "hebrew" ? "he" : "en");
+
+    const t = translations[newLanguage];
+    document.querySelector('.header-section h1').innerText = t.headerTitle;
+    document.querySelector('footer p').innerText = t.footerText;
+});

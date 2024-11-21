@@ -181,35 +181,36 @@
 
                     <!-- Contact Modal -->
                     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="contactModalLabel">צור קשר</h5>
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="contactModalLabel"><i class="fas fa-envelope"></i> צור קשר</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h6>פרטי התקשרות:</h6>
-                                    <p>טלפון: 123-456-7890</p>
-                                    <p>דוא"ל: contact@clinic.com</p>
+                                    <h6 class="text-secondary mb-4">נשמח לשמוע ממך!</h6>
+                                    <p><i class="fas fa-phone-alt text-primary"></i> טלפון: 123-456-7890</p>
+                                    <p><i class="fas fa-envelope text-primary"></i> דוא"ל: contact@clinic.com</p>
                                     <form id="contactForm">
                                         <div class="mb-3">
-                                            <label for="name" class="form-label">שם מלא:</label>
-                                            <input type="text" id="name" class="form-control" required>
+                                            <label for="name" class="form-label"><i class="fas fa-user text-primary"></i> שם מלא:</label>
+                                            <input type="text" id="name" class="form-control rounded-pill shadow-sm" placeholder="הזן את שמך" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="email" class="form-label">אימייל:</label>
-                                            <input type="email" id="email" class="form-control" required>
+                                            <label for="email" class="form-label"><i class="fas fa-at text-primary"></i> אימייל:</label>
+                                            <input type="email" id="email" class="form-control rounded-pill shadow-sm" placeholder="example@email.com" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="message" class="form-label">הודעה:</label>
-                                            <textarea id="message" class="form-control" rows="4" required></textarea>
+                                            <label for="message" class="form-label"><i class="fas fa-comment-alt text-primary"></i> הודעה:</label>
+                                            <textarea id="message" class="form-control rounded-3 shadow-sm" rows="4" placeholder="כתוב את הודעתך כאן..." required></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary w-100">שלח הודעה</button>
+                                        <button type="submit" class="btn btn-primary w-100 rounded-pill shadow-lg">שלח הודעה <i class="fas fa-paper-plane"></i></button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     
                 </div>
             </div>

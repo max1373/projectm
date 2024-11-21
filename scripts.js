@@ -109,3 +109,23 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     // איפוס הטופס
     event.target.reset();
 });
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+
+    // יצירת הודעת הצלחה
+    const successMessage = document.createElement('div');
+    successMessage.className = 'alert alert-success mt-3';
+    successMessage.innerHTML = `<strong>תודה ${name}!</strong> פנייתך נשלחה בהצלחה וניצור עמך קשר בהקדם.`;
+
+    // הצגת ההודעה במודל
+    const modalBody = document.querySelector('#contactModal .modal-body');
+    modalBody.innerHTML = '';
+    modalBody.appendChild(successMessage);
+
+    // סגירת המודל לאחר 3 שניות
+    setTimeout(() => {
+        const contactModal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+        contactModal.hide();
+    }, 3000);
+});

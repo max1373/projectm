@@ -140,3 +140,9 @@ footer .btn-primary:hover {
     border: none;
     background-color: #fff;
 }
+.fw-bold text-primary{
+    text-align: center;
+}
+.additional-info mt-5{
+    text-align: center;
+}

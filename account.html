@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>צור פרופיל מטופל - קופת חולים</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -42,6 +42,10 @@
                     </div>
                 </div>
                 <div class="mb-3">
+                    <label for="profilePicture" class="form-label">תמונת פרופיל</label>
+                    <input type="file" id="profilePicture" class="form-control">
+                </div>
+                <div class="mb-3">
                     <label for="preferredServices" class="form-label">שירותים רפואיים מועדפים</label>
                     <select id="preferredServices" class="form-select" multiple>
                         <option value="general">בדיקות כלליות</option>
@@ -52,12 +56,18 @@
                     </select>
                     <small class="text-muted">ניתן לבחור יותר משירות אחד</small>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mt-4"><i class="fas fa-user-plus"></i> צור פרופיל</button>
-                <a href="index.html" class="btn btn-link mt-3 text-center"><i class="fas fa-arrow-left"></i> חזור לדף הראשי</a>
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="terms" class="form-check-input" required>
+                    <label for="terms" class="form-check-label">אני מאשר/ת את <a href="#">תקנון האתר</a></label>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary w-100 me-2"><i class="fas fa-user-plus"></i> צור פרופיל</button>
+                    <button type="button" class="btn btn-danger w-100 ms-2"><i class="fas fa-times"></i> ביטול</button>
+                </div>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="account.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>

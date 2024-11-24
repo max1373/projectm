@@ -46,3 +46,15 @@ function updateProgressBar() {
     progressBar.style.width = `${progress}%`;
     progressBar.innerText = `${progress}%`;
 }
+document.getElementById('profilePicture').addEventListener('change', function () {
+    const file = this.files[0];
+    const preview = document.getElementById('profilePreview');
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+});

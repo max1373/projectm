@@ -42,7 +42,7 @@ function sendMessage() {
                 messages.push({ type: "received", content: botQuestions[questionIndex] });
                 questionIndex++;
             } else {
-                messages.push({ type: "received", content: "תודה על התשובות! אם יש לך שאלות נוספות, אני כאן.");
+                messages.push({ type: "received", content: "תודה על התשובות! אם יש לך שאלות נוספות, אני כאן."});
             }
             displayChat();
         }, 1000);

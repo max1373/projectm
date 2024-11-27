@@ -42,20 +42,12 @@ function sendMessage() {
                 messages.push({ type: "received", content: botQuestions[questionIndex] });
                 questionIndex++;
             } else {
-                messages.push({ type: "received", content: "תודה על התשובות! אם יש עוד שאלות, אני כאן." });
+                messages.push({ type: "received", content: "תודה על התשובות! אם יש לך שאלות נוספות, אני כאן.");
             }
             displayChat();
         }, 1000);
     }
 }
 
-// ניקוי הודעות בעת יציאה מהעמוד
-window.addEventListener("beforeunload", () => {
-    messages.length = 0;
-    questionIndex = 0;
-});
-
-// הצגת הודעת ברוכים הבאים בעת טעינת הדף
-document.addEventListener("DOMContentLoaded", () => {
-    displayChat();
-});
+// הצגת הצ'אט בעת טעינת הדף
+document.addEventListener("DOMContentLoaded", displayChat);

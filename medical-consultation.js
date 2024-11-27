@@ -1,6 +1,10 @@
 // הודעות ראשוניות
 const messages = [
-    { type: "received", content: "שלום! אני הבוט הרפואי שלך. איך אני יכול לעזור?" }
+    {
+        type: "received",
+        content: "שלום! אני הבוט הרפואי שלך. איך אני יכול לעזור?",
+        profilePic: "https://via.placeholder.com/40?text=B"
+    }
 ];
 
 // סדרת שאלות מהבוט
@@ -20,7 +24,19 @@ function displayChat() {
     messages.forEach(msg => {
         const messageElement = document.createElement("div");
         messageElement.classList.add("message", msg.type);
-        messageElement.innerHTML = `<div class="content">${msg.content}</div>`;
+
+        const profilePic = document.createElement("img");
+        profilePic.src = msg.profilePic || "https://via.placeholder.com/40?text=U";
+        profilePic.alt = "תמונת פרופיל";
+        profilePic.classList.add("profile-pic");
+
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = msg.content;
+
+        messageElement.appendChild(profilePic);
+        messageElement.appendChild(content);
+
         chatWindow.appendChild(messageElement);
     });
     chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -32,17 +48,29 @@ function sendMessage() {
     const content = input.value.trim();
     if (content) {
         // הוספת הודעה שנשלחה
-        messages.push({ type: "sent", content });
+        messages.push({
+            type: "sent",
+            content,
+            profilePic: "https://via.placeholder.com/40?text=U"
+        });
         displayChat();
         input.value = "";
 
         // תגובה אוטומטית מהבוט
         setTimeout(() => {
             if (questionIndex < botQuestions.length) {
-                messages.push({ type: "received", content: botQuestions[questionIndex] });
+                messages.push({
+                    type: "received",
+                    content: botQuestions[questionIndex],
+                    profilePic: "https://via.placeholder.com/40?text=B"
+                });
                 questionIndex++;
             } else {
-                messages.push({ type: "received", content: "תודה על התשובות! אם יש לך שאלות נוספות, אני כאן."});
+                messages.push({
+                    type: "received",
+                    content: "תודה על התשובות! אם יש עוד שאלות, אני כאן.",
+                    profilePic: "https://via.placeholder.com/40?text=B"
+                });
             }
             displayChat();
         }, 1000);

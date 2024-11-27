@@ -29,7 +29,7 @@
 
         /* אזור הצ'אט */
         .chat-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 40px auto;
             background: white;
             border-radius: 8px;
@@ -38,25 +38,28 @@
         }
 
         #chatWindow {
-            height: 400px;
+            height: 500px;
             overflow-y: auto;
             padding: 15px;
-            border-bottom: 1px solid #ddd;
             background: #f9f9f9;
         }
 
         .message {
-            margin-bottom: 15px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
 
         .message.sent {
-            justify-content: flex-end;
+            flex-direction: row-reverse;
         }
 
-        .message.received {
-            justify-content: flex-start;
+        .message .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            object-fit: cover;
         }
 
         .message .content {
@@ -82,6 +85,7 @@
             display: flex;
             border-top: 1px solid #ddd;
             padding: 10px;
+            background: white;
         }
 
         .input-row input {
